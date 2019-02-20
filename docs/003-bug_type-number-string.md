@@ -11,3 +11,7 @@
 1. 模拟器上： type === 1，显示正确
 2. 真机上(iphoneSE) type === '1', 显示正确
 3. 所以，这里只能用  type == '1'
+
+
+## resources:
+- http://html51.com/info-43477-1/
