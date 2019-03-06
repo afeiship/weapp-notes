@@ -15,3 +15,5 @@
 ## 3. 小程序定制 header/navigator 自己控制导航栏的样式
 - 分享时：显示 home
 - 正常时候：显示 back + home
+
+## 4.小程序 wxs filters 的功能
