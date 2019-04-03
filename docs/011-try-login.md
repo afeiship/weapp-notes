@@ -52,4 +52,29 @@ function appReady(inCallback){
 appReady(()=>{
     // your logic
 })
+
+// 更完美的方式思考：============
+
+// token adaptor:
+class TokenAdaptor extends NxTokenAdaptor{
+    setSync(){}
+    getSync(){}
+    setAsync(){}
+    getAsync(){}
+}
+
+// app 设置 token:
+nx.App({
+    config:{
+        tokenAdapter: MyTokenAdaptar
+    }
+})
+
+nx.Page({
+    lifetimes:{
+        appReady(){
+            // do your logic:
+        }
+    }
+})
 ```
