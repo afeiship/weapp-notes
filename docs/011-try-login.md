@@ -33,13 +33,14 @@ $route.go(redirect_url);
 ## 类似于 domReady，实现一个 appReady
 ```js
 // 这个需要根据业务实现
+// $auth.set/getToken 均为同步方法
 import { $api, $auth } from '#';
 
 function appReady(inCallback){
-    const token = $auto.getToken();
+    const token = $auth.getToken();
     if(!token){
         $api.get_token().then(response=>{
-            $auto.setToken(response);
+            $auth.setToken(response);
             inCallback();
         })
     }else{
