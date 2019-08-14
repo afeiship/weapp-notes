@@ -5,6 +5,7 @@
     "pages/page3/index",
     "pages/page4/index"
   ],
+  "requiredBackgroundModes": ["audio"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
