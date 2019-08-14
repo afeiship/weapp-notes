@@ -31,13 +31,16 @@ service() {
       // delay click for cover-view:
     $interaction.loading(true, { title: '加载中' });
     $api.ext_info_desc().then(({ found, info }) => {
-    this.setData({ found, info }, () => {
-        // todo: 这里如果用回调，会出问题：
-        // $interaction.loading(true, {
-        //   title: '你的回调里如果是异步，在 IOS 上永远不执行； 同步可以执行'
-        // });
-    });
-    this.selectAction(found);
+      this.setData({ found, info }, () => {
+          // todo: 这里如果用回调，会出问题：
+          // $interaction.loading(true, {
+          //   title: '你的回调里如果是异步，在 IOS 上永远不执行； 同步可以执行'
+          // });
+      });
+      this.selectAction(found);
     });
 },
 ```
+
+## resources
+- https://developers.weixin.qq.com/miniprogram/dev/framework/performance/tips.html

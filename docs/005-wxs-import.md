@@ -6,13 +6,13 @@
     test: /\.(wxs)$/,
     include: /src/,
     use: {
-    loader: 'file-loader',
-    options: {
-        useRelativePath: true,
-        name: '[name].[ext]',
-        context: srcDir,
-        publicPath: '../../components/filters'
-    }
+        loader: 'file-loader',
+        options: {
+            useRelativePath: true,
+            name: '[name].[ext]',
+            context: srcDir,
+            publicPath: '../../components/filters'
+        }
     }
 },
 ```
